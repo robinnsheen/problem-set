@@ -13,7 +13,7 @@ function twoArrayObject(keys, vals) {
 
   let obj = {};
 
-  for (let i=0; i < keyArr.length; i++) {
+  for (let i=0; i < keys.length; i++) {
 
     if (vals[i] === undefined) {
       obj[keys[i]] = null;
