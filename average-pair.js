@@ -1,7 +1,7 @@
 // add whatever parameters you deem necessary & write docstring
 /** takes a sorted array of numbers (nums), numeric value (targetAvg)
  * to see if there is a pair where the average = target (true or false)
- * there can be more than one pair. 
+ * there can be more than one pair.
  */
 function averagePair(nums, target) {
     let left = 0;
