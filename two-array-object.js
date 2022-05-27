@@ -1,4 +1,5 @@
-// add whatever parameters you deem necessary & write docstring
+"use strict";
+
 /**
  * input: 2 arrays, possibly diff lenghts
  * 1st arr: keys
@@ -8,16 +9,16 @@
  * not enough val: rest of keys have val of null
  * not enough keys: ignore keys
  */
-function twoArrayObject(keyArr, valArr) {
+function twoArrayObject(keys, vals) {
 
   let obj = {};
 
   for (let i=0; i < keyArr.length; i++) {
 
-    if (valArr[i] === undefined) {
-      obj[keyArr[i]] = null;
+    if (vals[i] === undefined) {
+      obj[keys[i]] = null;
     } else {
-      obj[keyArr[i]] = valArr[i];
+      obj[keys[i]] = vals[i];
     }
 
 

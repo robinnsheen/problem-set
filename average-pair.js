@@ -1,4 +1,5 @@
-// add whatever parameters you deem necessary & write docstring
+"use strict";
+
 /** takes a sorted array of numbers (nums), numeric value (targetAvg)
  * to see if there is a pair where the average = target (true or false)
  * there can be more than one pair.
