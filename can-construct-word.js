@@ -6,8 +6,7 @@ function canConstructWord(word, letters) {
    * frequency counter (only lower case letters, no spaces, or punctuations)
    */
 
-
-  let freqWord = freqCounter(word);
+  let freqWord = freqCounter(word);// sj, sjj
   let freqLetters = freqCounter(letters);
 
 
@@ -16,7 +15,7 @@ function canConstructWord(word, letters) {
   }
 
   for (let char of word) {
-    if ( freqLetters[char] !== freqWord[char] ) {
+    if (freqLetters[char] < freqWord[char]) {
       return false;
     }
   }
@@ -27,7 +26,11 @@ function canConstructWord(word, letters) {
 function freqCounter(string) {
   let freqCounter = {};
   for (let char of string) {
-    freqCounter[char] = (freqCounter[char] || 0) + 1;
+    if (freqCounter[char] === undefined) {
+      freqCounter[char] = 1;
+    } else {
+      freqCounter[char] += 1;
+    }
   }
   return freqCounter;
 }
