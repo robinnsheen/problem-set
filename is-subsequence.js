@@ -5,31 +5,60 @@
  * return true or false
  */
 
-function isSubsequence(s1, s2) {
+ function isSubsequence(s1, s2) {
     let i = 0;
     let j = 0;
-    let match;
-    //case 1
-    while (i < s1.length || j < s2.length){
-        if (s1[i] !== s2[j]){
+
+    while (i < s1.length - 1 && j < s2.length) {
+        if (s1[i] !== s2[j]) {
             j++;
-            match = false;
-        }else{
+        } else {
             i++;
             j++;
         }
-        
-        
-        if (i === s1.length && s1[i] !== s2[j]){
-            j++;
-            match = false;
-        }else{
-            match = true;
-        }
-
     }
-    return match;
-   
+
+    // end case
+
+    while (i === s1.length - 1 && j < s2.length) {
+        if (s1[i] !== s2[j]) {
+            j++;
+
+        } else {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+
+// function isSubsequence(s1, s2) {
+//     let i = 0;
+//     let j = 0;
+//     let match;
+//     //case 1
+//     while (i < s1.length || j < s2.length){
+//         if (s1[i] !== s2[j]){
+//             j++;
+//             match = false;
+//         }else{
+//             i++;
+//             j++;
+//         }
+
+
+//         if (i === s1.length && s1[i] !== s2[j]){
+//             j++;
+//             match = false;
+//         }else{
+//             match = true;
+//         }
+
+//     }
+//     return match;
+// }
+
     /*
     //case 2
     while (i === s1.length - 1 && j < s2.length){
@@ -40,9 +69,8 @@ function isSubsequence(s1, s2) {
     }
 
     // case 3
-    if (i < s1.length && j === s2.length - 1) return false */ 
+    if (i < s1.length && j === s2.length - 1) return false */
 
-}
 
 
 
