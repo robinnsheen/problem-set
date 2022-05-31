@@ -13,7 +13,7 @@ function pivotIndex(ints) {
   const indexToSum = new Map();
   let lowestPivot = ints.length;
 
-  while (left < ints.length-1) {
+  while (left < ints.length) {
 
     leftSum += ints[left];
     rightSum += ints[right];
